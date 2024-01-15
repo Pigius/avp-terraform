@@ -1,0 +1,5 @@
+
+*.hcl
+basic-example/.terraform/*
+basic-example/terraform.tfstate
+basic-example/terraform.tfstate.backup
