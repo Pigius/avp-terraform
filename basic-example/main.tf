@@ -2,7 +2,7 @@ terraform {
   required_providers {
     awscc = {
       source  = "hashicorp/awscc"
-      version = "~> 0.1.0"
+      version = "~> 0.68.0"
     }
   }
 }
@@ -14,7 +14,6 @@ provider "awscc" {
 resource "awscc_verifiedpermissions_policy_store" "policy_store" {
   validation_settings = { mode = "STRICT" }
   schema              = { cedar_json = file("${path.module}/schema.json") }
-
 }
 
 resource "awscc_verifiedpermissions_policy" "allow_policy" {
